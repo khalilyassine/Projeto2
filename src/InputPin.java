@@ -7,14 +7,18 @@ public class InputPin{
     private Source source;
 
     public int getIndex() {
+
+
         return index;
     }
 
     public Source getSource() {
+
         return source;
     }
 
     public InputPin(int index, Source source) {
+
         this.index = index;
         this.source = source;
     }
