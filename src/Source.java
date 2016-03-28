@@ -3,5 +3,5 @@
  */
 public interface Source {
 
-    boolen getOutputValue(int index);
+    boolean getOutputValue(int index);
 }
