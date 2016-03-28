@@ -1,5 +1,8 @@
+public class Switch implements Source {
 
-public class Switch {
-    
+	public boolean getOutputValue(int index) {
+
+	}
+}
 
 }
