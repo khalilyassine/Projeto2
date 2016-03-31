@@ -8,7 +8,11 @@ public class InputPin{
     private int index;
     private Source source;
 
-    public int getIndex() {
+    public void setSource(Source source) {
+		this.source = source;
+	}
+
+	public int getIndex() {
 
         return index;
     }
@@ -18,9 +22,8 @@ public class InputPin{
         return source;
     }
 
-    public InputPin(int index, Source source) {
+    public InputPin(int index) {
 
         this.index = index;
-        this.source = source;
     }
 }

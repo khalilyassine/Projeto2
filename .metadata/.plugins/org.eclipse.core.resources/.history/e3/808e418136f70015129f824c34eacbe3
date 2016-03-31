@@ -1,0 +1,15 @@
+package modelo.tests_portas;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestAndGate {
+
+	@Test
+	public void test1And1() {
+		Switch s = new Switch();
+		
+		
+	}
+
+}

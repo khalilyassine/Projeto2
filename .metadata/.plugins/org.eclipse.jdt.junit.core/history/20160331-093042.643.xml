@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestNotGate.test1Not" project="Projeto2" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="test1Not" classname="modelo.tests_portas.TestNotGate" time="0.0"/>
+</testrun>

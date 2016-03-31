@@ -12,7 +12,8 @@ public class LogicGate implements Source, Drain{
 
     public InputPin getInputPin(int index){
 
-        return null;
+        InputPin pin = new InputPin(index);
+        return pin;
     }
 
 }

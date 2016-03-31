@@ -1,0 +1,25 @@
+package modelo.tests_portas;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import modelo.*;
+
+public class TestAndGate {
+
+	@Test
+	public void test1And1() {
+		Switch s = new Switch();
+		AndGate and = new AndGate();
+		
+		A = and.setPinA(0);
+		B = and.setPinB(1);
+		
+		
+		
+		
+		
+		
+	}
+
+}
