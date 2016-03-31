@@ -6,16 +6,7 @@ package modelo;
 public class OrGate extends LogicGate{
 
     private InputPin pinA;
-    
-    public void setPinA(InputPin pinA) {
-		this.pinA = pinA;
-	}
-
-	public void setPinB(InputPin pinB) {
-		this.pinB = pinB;
-	}
-
-	private InputPin pinB;
+    private InputPin pinB;
 
     @Override
     public boolean getOutputValue(int index) {

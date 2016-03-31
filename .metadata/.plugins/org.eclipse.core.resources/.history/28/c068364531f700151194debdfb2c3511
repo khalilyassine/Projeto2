@@ -7,11 +7,7 @@ public class NotGate extends LogicGate{
 
     private InputPin pinA;
 
-    public void setPinA(InputPin pinA) {
-		this.pinA = pinA;
-	}
-
-	@Override
+    @Override
     public boolean getOutputValue(int index) {
 
         boolean sinalA = pinA.getSource().getOutputValue(pinA.getIndex());
