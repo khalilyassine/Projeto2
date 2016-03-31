@@ -1,9 +1,0 @@
-package modelo;
-
-public class Switch implements Source {
-
-	public boolean getOutputValue(int index) {
-			return false;
-	}
-}
-
