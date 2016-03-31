@@ -1,0 +1,23 @@
+package visao;
+import javax.swing.JPanel;
+
+
+
+public class Screen {
+	private static final long serialVersionUID = 1L;
+	
+	
+	private int width;
+	private int height;
+	
+	public void Screen(){
+		
+		
+		this.width = 700;
+		this.height = 700;
+		
+		setPreferredSize(new Dimension(this.width, this.height));
+		
+	}
+
+}
