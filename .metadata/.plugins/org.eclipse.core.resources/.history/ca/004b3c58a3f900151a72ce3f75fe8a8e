@@ -1,0 +1,69 @@
+package visao;
+
+import java.awt.GridLayout;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TestFrameExample {
+
+	public static void main(String[] s) {
+
+		JFrame frame = new JFrame("JFrame Example");
+
+		JPanel panel = new JPanel();
+		
+		panel.setLayout(null);
+		
+		/* Visual da Porta AND */
+		JButton button_and = new JButton();
+		
+		button_and.setText("Porta AND");
+		panel.add(button_and);
+		button_and.setBounds(290 , 0,
+	             110, 20);
+		
+		/*Visual da Porta OR*/
+		JButton button_or = new JButton();
+		
+		button_or.setText("Porta OR");
+		panel.add(button_or);
+		button_or.setBounds(290 , 20,
+	             110,20);
+		
+		/*Visual da Porta NOT*/
+		JButton button_not = new JButton();
+		
+		button_not.setText("Porta NOT");
+		panel.add(button_not);
+		button_not.setBounds(290 , 40,
+	             110,20);
+		/*Visual da Porta XOR*/
+		JButton button_xor = new JButton();
+		
+		button_xor.setText("Porta XOR");
+		panel.add(button_xor);
+		button_xor.setBounds(290 , 60,
+	             110,20);
+		/*Visual do Half Adder*/
+		JButton button_ha = new JButton();
+		
+		button_ha.setText("Half Adder");
+		panel.add(button_ha);
+		button_ha.setBounds(290 , 80,
+	             110,20);
+		
+		panel.setSize(200,200);
+		frame.add(panel);
+		frame.setSize(400, 400);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+			
+
+	}
+
+}

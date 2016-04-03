@@ -1,0 +1,48 @@
+package visao;
+
+import java.awt.GridLayout;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TestFrameExample {
+
+	public static void main(String[] s) {
+
+		JFrame frame = new JFrame("JFrame Example");
+
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(2,2));
+		panel.setSize(200,200);
+		panel.setLocation(200,0);
+
+		JButton button = new JButton();
+		button.setText("Press me");
+		button.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e){
+				JFrame frame2 = new JFrame("Teste janela 2");
+				frame2.setVisible(true);
+				frame2.setSize(400,400);
+				JLabel label2 = new JLabel("Voce me clicou!");
+				JPanel panel2 = new JPanel();
+				panel2.add(label2);		
+			}
+		});
+		
+		panel.add(button);
+
+
+		frame.add(panel);
+		frame.setSize(400, 400);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+			
+
+	}
+
+}

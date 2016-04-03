@@ -1,0 +1,53 @@
+package visao;
+
+import java.awt.FlowLayout;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TestFrameExample {
+
+	public static void main(String[] s) {
+
+		JFrame frame = new JFrame("JFrame Example");
+
+		JPanel panel = new JPanel();
+		panel.setLayout(new FlowLayout());
+
+		JLabel label = new JLabel("This is a label!");
+
+		JButton button = new JButton();
+		button.setText("Press me");
+		
+		JCheckBox check = new JCheckBox();
+		
+		button.addActionListener(new ActionListener());
+		panel.add(label);
+		panel.add(button);
+		panel.add(check);
+
+
+		frame.add(panel);
+		frame.setSize(400, 400);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+		class Action implements ActionListener{
+			
+			public void actionPerformed(ActionEvent e){
+				JFrame frame2 = new JFrame("Teste janela 2");
+				frame2.setVisible(true);
+				frame2.setSize(400,400);
+				JLabel label2 = new JLabel("Voce me clicou!");
+				JPanel panel2 = new JPanel();
+				panel2.add(label2);
+				
+				
+			}
+		}
+	}
+
+}
