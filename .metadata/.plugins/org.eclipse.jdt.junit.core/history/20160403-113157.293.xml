@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestNotGate" project="Projeto2" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="modelo.tests_portas.TestNotGate" time="0.0">
+    <testcase name="test0Not" classname="modelo.tests_portas.TestNotGate" time="0.0"/>
+    <testcase name="test1Not" classname="modelo.tests_portas.TestNotGate" time="0.0"/>
+  </testsuite>
+</testrun>

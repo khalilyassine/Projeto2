@@ -1,0 +1,54 @@
+package visao;
+import javax.swing.JPanel;
+import java.awt.Dimension;
+import java.awt.Graphics;
+
+
+
+public class PaintComponets extends JPanel  {
+
+	private static final long serialVersionUID = 1L;
+
+	private int width;
+	private int height;
+
+
+	public PaintComponets (){
+		this.width = 700;
+		this.height = 700;
+		
+		setPreferredSize(new Dimension(this.width,this.height));
+	}
+	
+	public void paintComponent( Graphics g ){
+	    super.paintComponent( g );
+	    
+	    ///	AND
+	    
+	    g.drawLine(0, 45,50,45);
+	    g.drawLine(0, 20,50,20);
+	    g.drawLine(80, 35,120,35);
+	    g.drawLine(50, 60, 50, 10);
+	    g.drawArc(30, 10, 50, 50, -100,200 );
+	    
+	    //NOT
+	    
+	    g.drawLine(90, 100, 120, 130);
+	    g.drawLine(120, 130,90,160);
+	    g.drawLine(90, 100, 90, 160);
+	    g.drawLine(40, 130,90,130);
+	    g.drawLine(120, 130,150,130);
+	    g.drawArc(120, 125, 10, 10, 0, 360);
+	    
+	    //OR
+	    
+		g.drawLine(25, 70, 75, 70);
+		g.drawLine(25, 100, 75, 100);
+		g.drawArc(-20, 35, 97, 100, 310, 100);
+		g.drawLine(59, 47, 119, 47);
+		g.drawLine(59, 124, 119, 124);
+		g.drawArc(40, 35, 97, 100, 310, 100);
+		g.drawLine(138, 85, 185, 85);
+	    
+
+	}

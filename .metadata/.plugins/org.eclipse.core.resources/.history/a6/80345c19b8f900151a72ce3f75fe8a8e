@@ -1,0 +1,25 @@
+package visao;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+public class Draw extends JPanel{
+	public void drawing(){
+		repaint();
+	}
+	public void paintComponent( Graphics g ){
+	    super.paintComponent( g );
+	    
+	    ///	AND
+	    
+	    g.drawLine(0, 45,50,45);
+	    g.drawLine(0, 20,50,20);
+	    g.drawLine(80, 35,120,35);
+	    g.drawLine(50, 60, 50, 10);
+	    g.drawArc(30, 10, 50, 50, -100,200 );
+	}
+}
