@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestXorGate" project="Projeto2" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="modelo.tests_portas.TestXorGate" time="0.002">
-    <testcase name="test0Xor0" classname="modelo.tests_portas.TestXorGate" time="0.001"/>
-    <testcase name="test0Xor1" classname="modelo.tests_portas.TestXorGate" time="0.0"/>
-    <testcase name="test1Xor0" classname="modelo.tests_portas.TestXorGate" time="0.0"/>
-    <testcase name="test1Xor1" classname="modelo.tests_portas.TestXorGate" time="0.001"/>
-  </testsuite>
-</testrun>

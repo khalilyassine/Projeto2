@@ -14,35 +14,83 @@ public class MainFrame extends JFrame implements ActionListener{
     public JButton button_xor;
     public JButton button_ha;
     public JButton button_fa;
+    public JCheckBox checkbox1;
+    public JCheckBox checkbox2;
+    public JCheckBox checkbox3;
+    public JCheckBox checkbox4;
+    public JCheckBox checkbox5;
     
     public int check = 6;
 
     public void paint(Graphics g){
 	    super.paint( g );
+	    
         if(check==0){
     	    ///	AND
-    	    g.drawLine(0, 45,50,45);
-    	    g.drawLine(0, 20,50,20);
-    	    g.drawLine(80, 35,120,35);
-    	    g.drawLine(50, 60, 50, 10);
-    	    g.drawArc(30, 10, 50, 50, -100,200 );
+    	    g.drawLine(130, 235,160,235);
+    	    g.drawLine(130, 210,160,210);
+    	    g.drawLine(190, 225,215,225);
+    	    g.drawLine(160, 250, 160, 200);
+    	    g.drawArc(140, 200, 50, 50, -100,200 );
+    	    
+    	    checkbox1.setLocation(110,200);
+    	    checkbox2.setLocation(110,175);    	    
+    	    checkbox4.setLocation(215,190);
         }
         if(check==1){
-    		g.drawLine(25, 70, 75, 70);
-    		g.drawLine(25, 100, 75, 100);
-    		g.drawArc(-20, 35, 97, 100, 310, 100);
-    		g.drawLine(59, 47, 119, 47);
-    		g.drawLine(59, 124, 119, 124);
-    		g.drawArc(40, 35, 97, 100, 310, 100);
-    		g.drawLine(138, 85, 185, 85);
+    		g.drawLine(95, 210, 145, 210);
+    		g.drawLine(95, 240, 145, 240);
+    		g.drawArc(50, 175, 97, 100, 310, 100);
+    		g.drawLine(129, 187, 189, 187);
+    		g.drawLine(129, 264, 189, 264);
+    		g.drawArc(110, 175, 97, 100, 310, 100);
+    		g.drawLine(208, 225, 255, 225);
+    		
+    	    checkbox1.setLocation(75,175);
+    	    checkbox2.setLocation(75,205);
+    	    checkbox4.setLocation(255,190);
         }
         if(check==2){
-    	    g.drawLine(90, 100, 120, 130);
-    	    g.drawLine(120, 130,90,160);
-    	    g.drawLine(90, 100, 90, 160);
-    	    g.drawLine(40, 130,90,130);
-    	    g.drawLine(120, 130,150,130);
-    	    g.drawArc(120, 125, 10, 10, 0, 360);
+    	    g.drawLine(170, 180, 200, 210);
+    	    g.drawLine(200, 210,170,240);
+    	    g.drawLine(170, 180, 170, 240);
+    	    g.drawLine(120, 210,170,210);
+    	    g.drawLine(200, 210,230,210);
+    	    g.drawArc(200, 205, 10, 10, 0, 360);
+    	    
+    	    checkbox1.setLocation(100,175);
+    	    checkbox4.setLocation(230,175);
+        }
+        if(check == 3){
+    		g.drawLine(105, 190, 155, 190);
+    		g.drawLine(105, 220, 155, 220);
+    		g.drawArc(60, 155, 97, 100, 310, 100);
+    		g.drawLine(139, 167, 199, 167);
+    		g.drawLine(139, 244, 199, 244);
+    		g.drawArc(120, 155, 97, 100, 310, 100);
+    		g.drawLine(218, 205, 265, 205);
+    		g.drawArc(47, 155, 97, 100, 310, 100);
+        }
+        if(check == 4){
+    		g.drawLine(95, 200, 145, 200);
+    		g.drawLine(95, 230, 145, 230);
+    		g.drawLine(145, 170, 145, 260);
+    		g.drawLine(145, 170, 235, 170);
+    		g.drawLine(145, 260, 235, 260);
+    		g.drawLine(235, 170, 235, 260);
+    		g.drawLine(235, 200, 285, 200);
+    		g.drawLine(235, 230, 285, 230);
+        }
+        if(check == 5){
+    		g.drawLine(95, 200, 145, 200);
+    		g.drawLine(95, 230, 145, 230);
+    		g.drawLine(95, 215, 145, 215);
+    		g.drawLine(145, 170, 145, 260);
+    		g.drawLine(145, 170, 235, 170);
+    		g.drawLine(145, 260, 235, 260);
+    		g.drawLine(235, 170, 235, 260);
+    		g.drawLine(235, 200, 285, 200);
+    		g.drawLine(235, 230, 285, 230);
         }
     }
 
@@ -90,31 +138,72 @@ public class MainFrame extends JFrame implements ActionListener{
         button_fa.addActionListener(this);
         add(button_fa);
         
+        checkbox1 = new JCheckBox();
+        checkbox2 = new JCheckBox();
+        checkbox3 = new JCheckBox();
+        checkbox4 = new JCheckBox();
+        checkbox5 = new JCheckBox();
+        
+        checkbox1.setSize(20,20);
+        checkbox2.setSize(20,20);
+        checkbox3.setSize(20,20);
+        checkbox4.setSize(20,20);
+        checkbox5.setSize(20,20);
+        
+        checkbox4.setEnabled(false);
+        checkbox5.setEnabled(false);
+        
+        
         setSize(400,400);
         setVisible(true);
     }    
 
-    public void actionPerformed(ActionEvent e) {    
+    public void actionPerformed(ActionEvent e) {  
+	    remove(checkbox1);
+	    remove(checkbox2);
+	    remove(checkbox3);
+	    remove(checkbox4);
+	    remove(checkbox5);
+	    
     	if(e.getSource() == button_and){
     		check=0;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox4);
     	}
     	if(e.getSource() == button_or){
     		check=1;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox4);
     	}
     	if(e.getSource() == button_not){
     		check=2;
+    		add(checkbox1);	
+    		add(checkbox4);
     	}
     	if(e.getSource() == button_xor){
     		check=3;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox4);
     	}
     	if(e.getSource() == button_ha){
     		check=4;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox3);
+    		add(checkbox4);
     	}
     	if(e.getSource() == button_fa){
     		check=5;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox3);
+    		add(checkbox4);
+    		add(checkbox5);
     	}
-    	
-        repaint();
+    	repaint();
     }
 
     public static void main(String args[]){
