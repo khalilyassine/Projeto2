@@ -214,10 +214,6 @@ public class MainFrame extends JFrame implements ActionListener{
 	    remove(checkbox3);
 	    remove(checkbox4);
 	    remove(checkbox5);
-	    
-	    checkbox1.setSelected(false);
-	    checkbox2.setSelected(false);
-	    checkbox3.setSelected(false);
 	    checkbox4.setSelected(false);
 	    checkbox5.setSelected(false);
 	    

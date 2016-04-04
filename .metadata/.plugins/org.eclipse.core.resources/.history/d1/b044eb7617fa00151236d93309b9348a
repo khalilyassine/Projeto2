@@ -107,33 +107,7 @@ public class ControleSaidas {
 			ha.setPinB(B);
 			
 			boolean saida = ha.getOutputValue(0);
-			boolean saida2 = ha.getOutputValue(1);
-
-			x.getCheckbox4().setSelected(saida);
-			x.getCheckbox5().setSelected(saida2);
-		}
-		
-		if (x.getCheck() == 5){
-			FullAdder fa = new FullAdder();
-	    	
-			boolean sinal1 = x.getCheckbox1().isSelected();
-			boolean sinal2 = x.getCheckbox2().isSelected();
-			boolean sinal3 = x.getCheckbox3().isSelected();
-						
-			s.setSinal(sinal1);
-			s2.setSinal(sinal2);
-			s3.setSinal(sinal3);
-			
-			A.setSource(s);
-			B.setSource(s2);
-			CarryIn.setSource(s3);
-			
-			fa.setPinA(A);
-			fa.setPinB(B);
-			fa.setCarry(CarryIn);
-			
-			boolean saida = fa.getOutputValue(0);
-			boolean saida2 = fa.getOutputValue(1);
+			boolean saida2 = ha.getOutputValue(0);
 
 			x.getCheckbox4().setSelected(saida);
 			x.getCheckbox5().setSelected(saida2);

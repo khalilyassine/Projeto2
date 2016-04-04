@@ -122,7 +122,7 @@ public class ControleSaidas {
 						
 			s.setSinal(sinal1);
 			s2.setSinal(sinal2);
-			s3.setSinal(sinal3);
+			s3.setSinal(sina3);
 			
 			A.setSource(s);
 			B.setSource(s2);
