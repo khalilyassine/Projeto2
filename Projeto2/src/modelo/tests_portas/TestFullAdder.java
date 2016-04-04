@@ -16,7 +16,7 @@ public class TestFullAdder {
 		InputPin B = fa.getInputPin(1);
 		InputPin C = fa.getInputPin(2);
 		
-		s.set1();
+		s.setSinal(true);
 		
 		A.setSource(s);
 		B.setSource(s);
@@ -43,8 +43,8 @@ public class TestFullAdder {
 		InputPin B = fa.getInputPin(1);
 		InputPin C = fa.getInputPin(2);
 		
-		s.set1();
-		s2.set0();
+		s.setSinal(true);
+		s2.setSinal(false);
 		
 		A.setSource(s);
 		B.setSource(s);
@@ -71,8 +71,8 @@ public class TestFullAdder {
 		InputPin B = fa.getInputPin(1);
 		InputPin C = fa.getInputPin(2);
 		
-		s.set1();
-		s2.set0();
+		s.setSinal(true);
+		s2.setSinal(false);
 		
 		A.setSource(s);
 		B.setSource(s2);
@@ -99,8 +99,8 @@ public class TestFullAdder {
 		InputPin B = fa.getInputPin(1);
 		InputPin C = fa.getInputPin(2);
 		
-		s.set1();
-		s2.set0();
+		s.setSinal(true);
+		s2.setSinal(false);
 		
 		A.setSource(s);
 		B.setSource(s2);
@@ -127,8 +127,8 @@ public class TestFullAdder {
 		InputPin B = fa.getInputPin(1);
 		InputPin C = fa.getInputPin(2);
 		
-		s.set1();
-		s2.set0();
+		s.setSinal(true);
+		s2.setSinal(false);
 		
 		A.setSource(s2);
 		B.setSource(s);
@@ -155,8 +155,8 @@ public class TestFullAdder {
 		InputPin B = fa.getInputPin(1);
 		InputPin C = fa.getInputPin(2);
 		
-		s.set1();
-		s2.set0();
+		s.setSinal(true);
+		s2.setSinal(false);
 		
 		A.setSource(s2);
 		B.setSource(s);
@@ -182,8 +182,8 @@ public class TestFullAdder {
 		InputPin B = fa.getInputPin(1);
 		InputPin C = fa.getInputPin(2);
 		
-		s.set1();
-		s2.set0();
+		s.setSinal(true);
+		s2.setSinal(false);
 		
 		A.setSource(s2);
 		B.setSource(s2);
@@ -209,7 +209,7 @@ public class TestFullAdder {
 		InputPin B = fa.getInputPin(1);
 		InputPin C = fa.getInputPin(2);
 		
-		s.set0();
+		s.setSinal(false);
 		
 		A.setSource(s);
 		B.setSource(s);

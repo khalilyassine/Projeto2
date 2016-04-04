@@ -15,7 +15,7 @@ public class TestHalfAdder {
 		InputPin A = ha.getInputPin(0);
 		InputPin B = ha.getInputPin(1);
 		
-		s.set1();
+		s.setSinal(true);
 		
 		A.setSource(s);
 		B.setSource(s);
@@ -38,8 +38,8 @@ public class TestHalfAdder {
 		InputPin A = ha.getInputPin(0);
 		InputPin B = ha.getInputPin(1);
 		
-		s.set1();
-		s2.set0();
+		s.setSinal(true);
+		s2.setSinal(false);
 		
 		A.setSource(s);
 		B.setSource(s2);
@@ -62,8 +62,8 @@ public class TestHalfAdder {
 		InputPin A = ha.getInputPin(0);
 		InputPin B = ha.getInputPin(1);
 		
-		s.set0();
-		s2.set1();
+		s.setSinal(false);
+		s2.setSinal(true);
 		
 		A.setSource(s);
 		B.setSource(s2);
@@ -85,7 +85,7 @@ public class TestHalfAdder {
 		InputPin A = ha.getInputPin(0);
 		InputPin B = ha.getInputPin(1);
 		
-		s.set0();
+		s.setSinal(false);
 		
 		A.setSource(s);
 		B.setSource(s);

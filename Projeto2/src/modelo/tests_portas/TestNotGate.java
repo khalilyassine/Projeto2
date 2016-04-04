@@ -14,7 +14,7 @@ public class TestNotGate {
 		
 		InputPin A = not.getInputPin(0);
 		
-		s.set1();
+		s.setSinal(true);
 		
 		A.setSource(s);
 		
@@ -33,7 +33,7 @@ public class TestNotGate {
 		
 		InputPin A = not.getInputPin(0);
 		
-		s.set0();
+		s.setSinal(false);
 		
 		A.setSource(s);
 		

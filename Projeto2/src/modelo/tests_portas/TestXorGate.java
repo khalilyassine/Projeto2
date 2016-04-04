@@ -17,7 +17,7 @@ public class TestXorGate  {
 		InputPin A = xor.getInputPin(0);
 		InputPin B = xor.getInputPin(1);
 		
-		s.set1();
+		s.setSinal(true);
 		
 		A.setSource(s);
 		B.setSource(s);
@@ -39,10 +39,10 @@ public class TestXorGate  {
 		InputPin A = xor.getInputPin(0);
 		InputPin B = xor.getInputPin(1);
 		
-		s.set0();
+		s.setSinal(false);
 		A.setSource(s);
 		
-		s2.set1();
+		s2.setSinal(true);
 		B.setSource(s2);
 		
 		xor.setPinA(A);
@@ -62,10 +62,10 @@ public class TestXorGate  {
 		InputPin A = xor.getInputPin(0);
 		InputPin B = xor.getInputPin(1);
 		
-		s.set1();
+		s.setSinal(true);
 		A.setSource(s);
 		
-		s2.set0();
+		s2.setSinal(false);
 		B.setSource(s2);
 		
 		xor.setPinA(A);
@@ -84,7 +84,7 @@ public class TestXorGate  {
 		InputPin A = xor.getInputPin(0);
 		InputPin B = xor.getInputPin(1);
 		
-		s.set0();
+		s.setSinal(false);
 		A.setSource(s);
 		B.setSource(s);
 		

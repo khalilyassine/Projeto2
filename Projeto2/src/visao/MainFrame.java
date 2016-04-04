@@ -33,8 +33,8 @@ public class MainFrame extends JFrame implements ActionListener{
     	    g.drawLine(160, 250, 160, 200);
     	    g.drawArc(140, 200, 50, 50, -100,200 );
     	    
-    	    checkbox1.setLocation(110,200);
-    	    checkbox2.setLocation(110,175);    	    
+    	    checkbox1.setLocation(75,175);
+    	    checkbox2.setLocation(75,200);    	    
     	    checkbox4.setLocation(215,190);
         }
         if(check==1){
@@ -46,8 +46,8 @@ public class MainFrame extends JFrame implements ActionListener{
     		g.drawArc(110, 175, 97, 100, 310, 100);
     		g.drawLine(208, 225, 255, 225);
     		
-    	    checkbox1.setLocation(75,175);
-    	    checkbox2.setLocation(75,205);
+    	    checkbox1.setLocation(40,175);
+    	    checkbox2.setLocation(40,205);
     	    checkbox4.setLocation(255,190);
         }
         if(check==2){
@@ -58,7 +58,7 @@ public class MainFrame extends JFrame implements ActionListener{
     	    g.drawLine(200, 210,230,210);
     	    g.drawArc(200, 205, 10, 10, 0, 360);
     	    
-    	    checkbox1.setLocation(100,175);
+    	    checkbox1.setLocation(65,175);
     	    checkbox4.setLocation(230,175);
         }
         if(check == 3){
@@ -70,6 +70,10 @@ public class MainFrame extends JFrame implements ActionListener{
     		g.drawArc(120, 155, 97, 100, 310, 100);
     		g.drawLine(218, 205, 265, 205);
     		g.drawArc(47, 155, 97, 100, 310, 100);
+    		
+    	    checkbox1.setLocation(50,155);
+    	    checkbox2.setLocation(50,185);
+    	    checkbox4.setLocation(265,170);
         }
         if(check == 4){
     		g.drawLine(95, 200, 145, 200);
@@ -80,6 +84,11 @@ public class MainFrame extends JFrame implements ActionListener{
     		g.drawLine(235, 170, 235, 260);
     		g.drawLine(235, 200, 285, 200);
     		g.drawLine(235, 230, 285, 230);
+    		
+    		checkbox1.setLocation(40,165);
+    		checkbox2.setLocation(40,195);
+    		checkbox4.setLocation(285,165);
+    		checkbox5.setLocation(285,195);
         }
         if(check == 5){
     		g.drawLine(95, 200, 145, 200);
@@ -91,7 +100,15 @@ public class MainFrame extends JFrame implements ActionListener{
     		g.drawLine(235, 170, 235, 260);
     		g.drawLine(235, 200, 285, 200);
     		g.drawLine(235, 230, 285, 230);
+    		
+    		checkbox1.setLocation(40,160);
+    		checkbox3.setLocation(20,200);
+    		checkbox2.setLocation(40,180);
+    		checkbox4.setLocation(285,165);
+    		checkbox5.setLocation(285,195);
         }
+        
+        repaint();
     }
 
     public void start(){
@@ -138,21 +155,25 @@ public class MainFrame extends JFrame implements ActionListener{
         button_fa.addActionListener(this);
         add(button_fa);
         
-        checkbox1 = new JCheckBox();
-        checkbox2 = new JCheckBox();
-        checkbox3 = new JCheckBox();
-        checkbox4 = new JCheckBox();
-        checkbox5 = new JCheckBox();
+        checkbox1 = new JCheckBox("PinA");
+        checkbox1.setHorizontalTextPosition(SwingConstants.LEFT);
+        checkbox2 = new JCheckBox("PinB");
+        checkbox2.setHorizontalTextPosition(SwingConstants.LEFT);
+        checkbox3 = new JCheckBox("CarryIn");
+        checkbox3.setHorizontalTextPosition(SwingConstants.LEFT);
+        checkbox4 = new JCheckBox("Out");
+        checkbox5 = new JCheckBox("CarryOut");
         
-        checkbox1.setSize(20,20);
-        checkbox2.setSize(20,20);
-        checkbox3.setSize(20,20);
-        checkbox4.setSize(20,20);
-        checkbox5.setSize(20,20);
+        checkbox1.setSize(100,20);
+        checkbox2.setSize(100,20);
+        checkbox3.setSize(100,20);
+        checkbox4.setSize(100,20);
+        checkbox5.setSize(100,20);
         
         checkbox4.setEnabled(false);
         checkbox5.setEnabled(false);
         
+
         
         setSize(400,400);
         setVisible(true);
@@ -192,8 +213,8 @@ public class MainFrame extends JFrame implements ActionListener{
     		check=4;
     		add(checkbox1);
     		add(checkbox2);	
-    		add(checkbox3);
     		add(checkbox4);
+    		add(checkbox5);
     	}
     	if(e.getSource() == button_fa){
     		check=5;
@@ -203,7 +224,6 @@ public class MainFrame extends JFrame implements ActionListener{
     		add(checkbox4);
     		add(checkbox5);
     	}
-    	repaint();
     }
 
     public static void main(String args[]){

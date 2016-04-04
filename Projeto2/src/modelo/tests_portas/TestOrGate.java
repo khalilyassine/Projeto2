@@ -15,7 +15,7 @@ public class TestOrGate {
 		InputPin A = or.getInputPin(0);
 		InputPin B = or.getInputPin(1);
 		
-		s.set1();
+		s.setSinal(true);
 		
 		A.setSource(s);
 		B.setSource(s);
@@ -37,10 +37,10 @@ public class TestOrGate {
 		InputPin A = or.getInputPin(0);
 		InputPin B = or.getInputPin(1);
 		
-		s.set1();
+		s.setSinal(true);
 		A.setSource(s);
 		
-		s2.set0();
+		s2.setSinal(false);
 		B.setSource(s2);
 		
 		or.setPinA(A);
@@ -60,10 +60,10 @@ public class TestOrGate {
 		InputPin A = or.getInputPin(0);
 		InputPin B = or.getInputPin(1);
 		
-		s.set1();
+		s.setSinal(true);
 		A.setSource(s);
 		
-		s2.set0();
+		s2.setSinal(false);
 		B.setSource(s2);
 		
 		or.setPinA(A);
@@ -82,7 +82,7 @@ public class TestOrGate {
 		InputPin A = or.getInputPin(0);
 		InputPin B = or.getInputPin(1);
 		
-		s.set0();
+		s.setSinal(false);
 		
 		A.setSource(s);
 		B.setSource(s);
