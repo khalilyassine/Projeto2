@@ -144,28 +144,28 @@ public class MainFrame extends JFrame implements ActionListener{
         setLayout(null);
         /*Button AND*/
         button_and = new JButton();
-        button_and.setText("AND Gate"); 
+        button_and.setText("Port AND"); 
         button_and.setBounds(280 , 0, 120, 20);
         button_and.addActionListener(this);
         add(button_and);
         
         /*Button OR*/
         button_or = new JButton();
-        button_or.setText("OR Gate"); 
+        button_or.setText("Port OR"); 
         button_or.setBounds(280 , 20, 120, 20);
         button_or.addActionListener(this);
         add(button_or);
         
         /*Button NOT*/
         button_not = new JButton();
-        button_not.setText("NOT Gate"); 
+        button_not.setText("Port NOT"); 
         button_not.setBounds(280 , 40, 120, 20);
         button_not.addActionListener(this);
         add(button_not);
         
         /*Button XOR*/
         button_xor = new JButton();
-        button_xor.setText("XOR Gate"); 
+        button_xor.setText("Port XOR"); 
         button_xor.setBounds(280 , 60, 120, 20);
         button_xor.addActionListener(this);
         add(button_xor);
