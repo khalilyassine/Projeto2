@@ -1,0 +1,30 @@
+package controle;
+
+import modelo.AndGate;
+import modelo.InputPin;
+import modelo.LogicGate;
+import modelo.Switch;
+import visao.MainFrame;
+
+public class Main {
+    public static void main(String args[]){
+		Switch s = new Switch();
+		LogicGate logic = new LogicGate();
+		
+		InputPin A = logic.getInputPin(0);
+		InputPin B = logic.getInputPin(1);
+		InputPin CarryIn = logic.getInputPin(2);
+		
+        MainFrame x=new MainFrame();
+        
+        x.start();
+        if (x.getCheck() == 0){
+        	boolean sinal_checkbox1 = x.getCheckbox1().isSelected();
+        	boolean sinal_checkbox2 = x.getCheckbox2().isSelected();
+        	
+        	
+        	
+        	
+        }
+    }
+}

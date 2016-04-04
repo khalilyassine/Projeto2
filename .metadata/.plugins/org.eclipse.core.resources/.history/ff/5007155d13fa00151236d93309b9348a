@@ -6,8 +6,6 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
-import controle.ControleSaidas;
-
 
 public class MainFrame extends JFrame implements ActionListener{
     private JButton button_and;
@@ -21,7 +19,6 @@ public class MainFrame extends JFrame implements ActionListener{
     private JCheckBox checkbox3;
     private JCheckBox checkbox4;
     private JCheckBox checkbox5;
-    ControleSaidas controle = new ControleSaidas();
     
     private int check = 6;
 
@@ -134,9 +131,7 @@ public class MainFrame extends JFrame implements ActionListener{
     		checkbox4.setLocation(285,165);
     		checkbox5.setLocation(285,195);
         }
-
         
-        controle.controleSaidas(this);
         repaint();
     }
 

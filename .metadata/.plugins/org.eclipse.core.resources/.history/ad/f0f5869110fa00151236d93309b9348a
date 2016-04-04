@@ -1,0 +1,10 @@
+package controle;
+
+import visao.MainFrame;
+
+public class Main {
+    public static void main(String args[]){
+        MainFrame x=new MainFrame();
+        x.start();
+    }
+}
