@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="238" key="dialogHeight"/>
-		<item value="338" key="dialogWidth"/>
+		<item value="202" key="dialogHeight"/>
+		<item value="302" key="dialogWidth"/>
 		<list key="textEntries">
-			<item value="1"/>
+			<item value="3"/>
 		</list>
 		<list key="orderedElements">
 			<item value="org.eclipse.jdt.ui.edit.text.java.create.getter.setter"/>
@@ -14,6 +14,8 @@
 		</list>
 		<list key="textArray">
 			<item value="setter"/>
+			<item value="gette"/>
+			<item value="getter"/>
 		</list>
 	</section>
 </section>

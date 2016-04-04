@@ -21,8 +21,6 @@ public class MainFrame extends JFrame implements ActionListener{
     private JCheckBox checkbox3;
     private JCheckBox checkbox4;
     private JCheckBox checkbox5;
-    private JLabel textHa; 
-    private JLabel textFa; 
     ControleSaidas controle = new ControleSaidas();
     
     private int check = 6;
@@ -118,8 +116,6 @@ public class MainFrame extends JFrame implements ActionListener{
     		checkbox2.setLocation(40,195);
     		checkbox4.setLocation(285,165);
     		checkbox5.setLocation(285,195);
-    		textHa.setSize(100,50);
-    		textHa.setLocation(150,160);
         }
         if(check == 5){
     		g.drawLine(95, 200, 145, 200);
@@ -132,8 +128,6 @@ public class MainFrame extends JFrame implements ActionListener{
     		g.drawLine(235, 200, 285, 200);
     		g.drawLine(235, 230, 285, 230);
     		
-    		textFa.setSize(100,50);
-    		textFa.setLocation(150,160);
     		checkbox1.setLocation(40,160);
     		checkbox3.setLocation(20,200);
     		checkbox2.setLocation(40,180);
@@ -207,9 +201,8 @@ public class MainFrame extends JFrame implements ActionListener{
         
         checkbox4.setEnabled(false);
         checkbox5.setEnabled(false);
-       
-        textHa = new JLabel("Half Adder");
-        textFa = new JLabel("Full Adder");
+        
+
         
         setSize(400,400);
         setVisible(true);
@@ -221,9 +214,6 @@ public class MainFrame extends JFrame implements ActionListener{
 	    remove(checkbox3);
 	    remove(checkbox4);
 	    remove(checkbox5);
-	    remove(textHa);
-	    remove(textFa);
-	    
 	    
 	    checkbox1.setSelected(false);
 	    checkbox2.setSelected(false);
@@ -260,7 +250,6 @@ public class MainFrame extends JFrame implements ActionListener{
     		add(checkbox2);	
     		add(checkbox4);
     		add(checkbox5);
-    		add(textHa);
     	}
     	if(e.getSource() == button_fa){
     		check=5;
@@ -269,7 +258,6 @@ public class MainFrame extends JFrame implements ActionListener{
     		add(checkbox3);
     		add(checkbox4);
     		add(checkbox5);
-    		add(textFa);
     	}
     }
 }
