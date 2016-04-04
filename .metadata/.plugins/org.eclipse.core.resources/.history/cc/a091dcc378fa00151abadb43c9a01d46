@@ -6,13 +6,14 @@ import org.junit.Test;
 import modelo.*;
 
 public class TestNotGate {
-	Switch s = new Switch();
-	NotGate not = new NotGate();
-	
-	InputPin A = not.getInputPin(0);
 
 	@Test
 	public void test1Not() {
+		Switch s = new Switch();
+		NotGate not = new NotGate();
+		
+		InputPin A = not.getInputPin(0);
+		
 		s.setSinal(true);
 		
 		A.setSource(s);
@@ -27,6 +28,11 @@ public class TestNotGate {
 	
 	@Test
 	public void test0Not() {
+		Switch s = new Switch();
+		NotGate not = new NotGate();
+		
+		InputPin A = not.getInputPin(0);
+		
 		s.setSinal(false);
 		
 		A.setSource(s);

@@ -6,16 +6,15 @@ import org.junit.Test;
 import modelo.*;
 
 public class TestHalfAdder {
-	Switch s = new Switch();
-	Switch s2 = new Switch();
-	HalfAdder ha = new HalfAdder();
-	
-	InputPin A = ha.getInputPin(0);
-	InputPin B = ha.getInputPin(1);
-	
 
 	@Test
 	public void test1HA1() {
+		Switch s = new Switch();
+		HalfAdder ha = new HalfAdder();
+		
+		InputPin A = ha.getInputPin(0);
+		InputPin B = ha.getInputPin(1);
+		
 		s.setSinal(true);
 		
 		A.setSource(s);
@@ -32,6 +31,13 @@ public class TestHalfAdder {
 	}
 	@Test
 	public void test1HA0() {
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		HalfAdder ha = new HalfAdder();
+		
+		InputPin A = ha.getInputPin(0);
+		InputPin B = ha.getInputPin(1);
+		
 		s.setSinal(true);
 		s2.setSinal(false);
 		
@@ -49,6 +55,13 @@ public class TestHalfAdder {
 	}
 	@Test
 	public void test0HA1() {
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		HalfAdder ha = new HalfAdder();
+		
+		InputPin A = ha.getInputPin(0);
+		InputPin B = ha.getInputPin(1);
+		
 		s.setSinal(false);
 		s2.setSinal(true);
 		
@@ -66,6 +79,12 @@ public class TestHalfAdder {
 	}
 	@Test
 	public void test0HA0() {
+		Switch s = new Switch();
+		HalfAdder ha = new HalfAdder();
+		
+		InputPin A = ha.getInputPin(0);
+		InputPin B = ha.getInputPin(1);
+		
 		s.setSinal(false);
 		
 		A.setSource(s);

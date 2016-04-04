@@ -6,16 +6,16 @@ import org.junit.Test;
 import modelo.*;
 
 public class TestFullAdder {
-	Switch s = new Switch();
-	Switch s2 = new Switch();
-	FullAdder fa = new FullAdder();
-	
-	InputPin A = fa.getInputPin(0);
-	InputPin B = fa.getInputPin(1);
-	InputPin C = fa.getInputPin(2);
 
 	@Test
-	public void test1FA1C1() {		
+	public void test1FA1C1() {
+		Switch s = new Switch();
+		FullAdder fa = new FullAdder();
+		
+		InputPin A = fa.getInputPin(0);
+		InputPin B = fa.getInputPin(1);
+		InputPin C = fa.getInputPin(2);
+		
 		s.setSinal(true);
 		
 		A.setSource(s);
@@ -34,7 +34,15 @@ public class TestFullAdder {
 		Assert.assertTrue(Saida2);	
 	}
 	@Test
-	public void test1FA1C0() {		
+	public void test1FA1C0() {
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		FullAdder fa = new FullAdder();
+		
+		InputPin A = fa.getInputPin(0);
+		InputPin B = fa.getInputPin(1);
+		InputPin C = fa.getInputPin(2);
+		
 		s.setSinal(true);
 		s2.setSinal(false);
 		
@@ -54,7 +62,15 @@ public class TestFullAdder {
 		Assert.assertTrue(Saida2);	
 	}
 	@Test
-	public void test1FA0C1() {	
+	public void test1FA0C1() {
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		FullAdder fa = new FullAdder();
+		
+		InputPin A = fa.getInputPin(0);
+		InputPin B = fa.getInputPin(1);
+		InputPin C = fa.getInputPin(2);
+		
 		s.setSinal(true);
 		s2.setSinal(false);
 		
@@ -75,6 +91,14 @@ public class TestFullAdder {
 	}
 	@Test
 	public void test1FA0C0() {
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		FullAdder fa = new FullAdder();
+		
+		InputPin A = fa.getInputPin(0);
+		InputPin B = fa.getInputPin(1);
+		InputPin C = fa.getInputPin(2);
+		
 		s.setSinal(true);
 		s2.setSinal(false);
 		
@@ -95,6 +119,14 @@ public class TestFullAdder {
 	}
 	@Test
 	public void test0FA1C1() {
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		FullAdder fa = new FullAdder();
+		
+		InputPin A = fa.getInputPin(0);
+		InputPin B = fa.getInputPin(1);
+		InputPin C = fa.getInputPin(2);
+		
 		s.setSinal(true);
 		s2.setSinal(false);
 		
@@ -115,6 +147,14 @@ public class TestFullAdder {
 	}
 	@Test
 	public void test0FA1C0() {
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		FullAdder fa = new FullAdder();
+		
+		InputPin A = fa.getInputPin(0);
+		InputPin B = fa.getInputPin(1);
+		InputPin C = fa.getInputPin(2);
+		
 		s.setSinal(true);
 		s2.setSinal(false);
 		
@@ -134,6 +174,14 @@ public class TestFullAdder {
 		Assert.assertFalse(Saida2);	
 	}
 	public void test0FA0C1() {
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		FullAdder fa = new FullAdder();
+		
+		InputPin A = fa.getInputPin(0);
+		InputPin B = fa.getInputPin(1);
+		InputPin C = fa.getInputPin(2);
+		
 		s.setSinal(true);
 		s2.setSinal(false);
 		
@@ -154,6 +202,13 @@ public class TestFullAdder {
 	}
 	@Test
 	public void test0FA0C0() {
+		Switch s = new Switch();
+		FullAdder fa = new FullAdder();
+		
+		InputPin A = fa.getInputPin(0);
+		InputPin B = fa.getInputPin(1);
+		InputPin C = fa.getInputPin(2);
+		
 		s.setSinal(false);
 		
 		A.setSource(s);

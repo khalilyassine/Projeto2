@@ -6,15 +6,15 @@ import org.junit.Test;
 import modelo.*;
 
 public class TestOrGate {
-	Switch s = new Switch();
-	Switch s2 = new Switch();
-	OrGate or = new OrGate();
-	
-	InputPin A = or.getInputPin(0);
-	InputPin B = or.getInputPin(1);
 
 	@Test
 	public void test1Or1() {
+		Switch s = new Switch();
+		OrGate or = new OrGate();
+		
+		InputPin A = or.getInputPin(0);
+		InputPin B = or.getInputPin(1);
+		
 		s.setSinal(true);
 		
 		A.setSource(s);
@@ -30,6 +30,13 @@ public class TestOrGate {
 	}
 	@Test
 	public void test0And1(){
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		OrGate or = new OrGate();
+		
+		InputPin A = or.getInputPin(0);
+		InputPin B = or.getInputPin(1);
+		
 		s.setSinal(true);
 		A.setSource(s);
 		
@@ -46,6 +53,13 @@ public class TestOrGate {
 	}
 	@Test
 	public void test1And0(){
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		OrGate or = new OrGate();
+		
+		InputPin A = or.getInputPin(0);
+		InputPin B = or.getInputPin(1);
+		
 		s.setSinal(true);
 		A.setSource(s);
 		
@@ -62,6 +76,12 @@ public class TestOrGate {
 	}
 	@Test
 	public void test0And0(){
+		Switch s = new Switch();
+		OrGate or = new OrGate();
+		
+		InputPin A = or.getInputPin(0);
+		InputPin B = or.getInputPin(1);
+		
 		s.setSinal(false);
 		
 		A.setSource(s);

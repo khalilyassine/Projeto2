@@ -10,7 +10,6 @@ import controle.ControleSaidas;
 
 
 public class MainFrame extends JFrame implements ActionListener{
-	/// Declaracao de todos atributos(componentes e paineis) do frame.
     private JButton button_and;
     private JButton button_or;
     private JButton button_not;
@@ -24,13 +23,10 @@ public class MainFrame extends JFrame implements ActionListener{
     private JCheckBox checkbox5;
     private JLabel textHa; 
     private JLabel textFa; 
-    /// Novo objecto da classe ControleSaida para juntar a logica com a visao
     ControleSaidas controle = new ControleSaidas();
     
-    /// Declarao de atributo auxiliar para qual botao sera escolhido.
     private int check = 6;
 
-    /// Getters dos checkboxs para o controle
     public int getCheck() {
 		return check;
 	}
@@ -55,7 +51,6 @@ public class MainFrame extends JFrame implements ActionListener{
 		return checkbox5;
 	}
 
-	/// Metodos de desenho das portas com todas as localizacoes do checkboxs
 	public void paint(Graphics g){
 	    super.paint( g );
 	    
@@ -155,8 +150,7 @@ public class MainFrame extends JFrame implements ActionListener{
         controle.controleSaidas(this);
         repaint();
     }
-	
-	/// Metodos principal para comecar a parte grafica
+
     public void start(){
         setLayout(null);
         /*Button AND*/
@@ -227,8 +221,7 @@ public class MainFrame extends JFrame implements ActionListener{
         setSize(400,400);
         setVisible(true);
     }    
-    
-    /// Metodo para quando algum botao for apertado
+
     public void actionPerformed(ActionEvent e) {  
     	/// Remover todos componentes usados anteriormente
 	    remove(checkbox1);

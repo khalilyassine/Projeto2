@@ -8,16 +8,15 @@ import modelo.InputPin;
 import modelo.Switch;
 
 public class TestXorGate  {
-	Switch s = new Switch();
-	Switch s2 = new Switch();
-	XorGate xor = new XorGate();
-	
-	InputPin A = xor.getInputPin(0);
-	InputPin B = xor.getInputPin(1);
-	
 
 	@Test
 	public void test1Xor1() {
+		Switch s = new Switch();
+		XorGate xor = new XorGate();
+		
+		InputPin A = xor.getInputPin(0);
+		InputPin B = xor.getInputPin(1);
+		
 		s.setSinal(true);
 		
 		A.setSource(s);
@@ -33,6 +32,13 @@ public class TestXorGate  {
 	}
 	@Test
 	public void test0Xor1(){
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		XorGate xor = new XorGate();
+		
+		InputPin A = xor.getInputPin(0);
+		InputPin B = xor.getInputPin(1);
+		
 		s.setSinal(false);
 		A.setSource(s);
 		
@@ -49,6 +55,13 @@ public class TestXorGate  {
 	}
 	@Test
 	public void test1Xor0(){
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		XorGate xor = new XorGate();
+		
+		InputPin A = xor.getInputPin(0);
+		InputPin B = xor.getInputPin(1);
+		
 		s.setSinal(true);
 		A.setSource(s);
 		
@@ -65,6 +78,12 @@ public class TestXorGate  {
 	}
 	@Test
 	public void test0Xor0(){
+		Switch s = new Switch();
+		XorGate xor = new XorGate();
+		
+		InputPin A = xor.getInputPin(0);
+		InputPin B = xor.getInputPin(1);
+		
 		s.setSinal(false);
 		A.setSource(s);
 		B.setSource(s);

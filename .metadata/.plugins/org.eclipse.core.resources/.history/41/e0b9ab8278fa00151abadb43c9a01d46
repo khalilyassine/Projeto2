@@ -6,16 +6,15 @@ import org.junit.Test;
 import modelo.*;
 
 public class TestAndGate {
-	Switch s = new Switch();
-	Switch s2 = new Switch();
-	
-	AndGate and = new AndGate();
-	
-	InputPin A = and.getInputPin(0);
-	InputPin B = and.getInputPin(1);
 
 	@Test
-	public void test1And1() {		
+	public void test1And1() {
+		Switch s = new Switch();
+		AndGate and = new AndGate();
+		
+		InputPin A = and.getInputPin(0);
+		InputPin B = and.getInputPin(1);
+		
 		s.setSinal(true);
 		
 		A.setSource(s);
@@ -30,7 +29,14 @@ public class TestAndGate {
 		
 	}
 	@Test
-	public void test0And1(){		
+	public void test0And1(){
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		AndGate and = new AndGate();
+		
+		InputPin A = and.getInputPin(0);
+		InputPin B = and.getInputPin(1);
+		
 		s.setSinal(false);
 		A.setSource(s);
 		
@@ -46,7 +52,14 @@ public class TestAndGate {
 			
 	}
 	@Test
-	public void test1And0(){		
+	public void test1And0(){
+		Switch s = new Switch();
+		Switch s2 = new Switch();
+		AndGate and = new AndGate();
+		
+		InputPin A = and.getInputPin(0);
+		InputPin B = and.getInputPin(1);
+		
 		s.setSinal(true);
 		A.setSource(s);
 		
@@ -62,7 +75,13 @@ public class TestAndGate {
 			
 	}
 	@Test
-	public void test0And0(){		
+	public void test0And0(){
+		Switch s = new Switch();
+		AndGate and = new AndGate();
+		
+		InputPin A = and.getInputPin(0);
+		InputPin B = and.getInputPin(1);
+		
 		s.setSinal(false);
 		A.setSource(s);
 		B.setSource(s);
