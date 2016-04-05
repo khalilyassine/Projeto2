@@ -1,0 +1,19 @@
+package modelo;
+
+public class Lamp implements Drain {
+	
+	InputPin pin;
+	
+	
+	public Lamp(InputPin pin) {
+		this.pin = pin;
+	}
+
+	public InputPin getInputPin(int index) {
+        return pin;
+	}
+	
+	public boolean getOutput(InputPin pin){
+		return this.pin.getSource().getOutputValue(0);
+	}
+}

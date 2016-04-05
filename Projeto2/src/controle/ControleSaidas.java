@@ -13,6 +13,10 @@ public class ControleSaidas {
 	InputPin B = logic.getInputPin(1);
 	InputPin CarryIn = logic.getInputPin(2);
 	
+	Lamp l = new Lamp();
+	Lamp l2 = new Lamp();
+	Lamp l3 = new Lamp();
+	
 	public void controleSaidas(MainFrame x){
 		if (x.getCheck() == 0){
 			AndGate and = new AndGate();
@@ -29,7 +33,9 @@ public class ControleSaidas {
 			and.setPinA(A);
 			and.setPinB(B);
 			
-			boolean saida = and.getOutputValue(0);
+			l.getInputPin(0).setSource(and);
+			
+			boolean saida = l.getOutput(l.getPin(),0);
 
 			x.getCheckbox4().setSelected(saida);
 
@@ -50,7 +56,10 @@ public class ControleSaidas {
 			or.setPinA(A);
 			or.setPinB(B);
 			
-			boolean saida = or.getOutputValue(0);
+			l.getInputPin(0).setSource(or);
+			
+			boolean saida = l.getOutput(l.getPin(),0);
+			
 
 			x.getCheckbox4().setSelected(saida);
 		}
@@ -66,7 +75,9 @@ public class ControleSaidas {
 			
 			not.setPinA(A);
 			
-			boolean saida = not.getOutputValue(0);
+			l.getInputPin(0).setSource(not);
+			
+			boolean saida = l.getOutput(l.getPin(),0);
 
 			x.getCheckbox4().setSelected(saida);
 		}
@@ -86,7 +97,9 @@ public class ControleSaidas {
 			xor.setPinA(A);
 			xor.setPinB(B);
 			
-			boolean saida = xor.getOutputValue(0);
+			l.getInputPin(0).setSource(xor);
+			
+			boolean saida = l.getOutput(l.getPin(),0);
 
 			x.getCheckbox4().setSelected(saida);
 		}
@@ -106,8 +119,11 @@ public class ControleSaidas {
 			ha.setPinA(A);
 			ha.setPinB(B);
 			
-			boolean saida = ha.getOutputValue(0);
-			boolean saida2 = ha.getOutputValue(1);
+			l.getInputPin(0).setSource(ha);
+			l2.getInputPin(1).setSource(ha);
+			
+			boolean saida = l.getOutput(l.getPin(),0);
+			boolean saida2 = l.getOutput(l.getPin(),1);
 
 			x.getCheckbox4().setSelected(saida);
 			x.getCheckbox5().setSelected(saida2);
@@ -132,8 +148,12 @@ public class ControleSaidas {
 			fa.setPinB(B);
 			fa.setCarry(CarryIn);
 			
-			boolean saida = fa.getOutputValue(0);
-			boolean saida2 = fa.getOutputValue(1);
+			l.getInputPin(0).setSource(fa);
+			l2.getInputPin(1).setSource(fa);
+			l3.getInputPin(2).setSource(fa);
+			
+			boolean saida = l.getOutput(l.getPin(),0);
+			boolean saida2 = l.getOutput(l.getPin(),1);
 
 			x.getCheckbox4().setSelected(saida);
 			x.getCheckbox5().setSelected(saida2);

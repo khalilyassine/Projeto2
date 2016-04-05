@@ -1,0 +1,162 @@
+package controle;
+
+import modelo.*;
+import visao.MainFrame;
+
+public class ControleSaidas {
+	Switch s = new Switch();
+	Switch s2 = new Switch();
+	Switch s3 = new Switch();
+	LogicGate logic = new LogicGate();
+	
+	InputPin A = logic.getInputPin(0);
+	InputPin B = logic.getInputPin(1);
+	InputPin CarryIn = logic.getInputPin(2);
+	
+	Lamp l = new Lamp();
+	Lamp l2 = new Lamp();
+	Lamp l3 = new Lamp();
+	
+	public void controleSaidas(MainFrame x){
+		if (x.getCheck() == 0){
+			AndGate and = new AndGate();
+    	
+			boolean sinal1 = x.getCheckbox1().isSelected();
+			boolean sinal2 = x.getCheckbox2().isSelected();
+						
+			s.setSinal(sinal1);
+			s2.setSinal(sinal2);
+			
+			A.setSource(s);
+			B.setSource(s2);
+			
+			and.setPinA(A);
+			and.setPinB(B);
+			
+			l.getInputPin(0).setSource(and);
+			
+			boolean saida = l.getOutput(l.getInputPin(0));
+
+			x.getCheckbox4().setSelected(saida);
+
+    	}
+		
+		if (x.getCheck() == 1){
+			OrGate or = new OrGate();
+	    	
+			boolean sinal1 = x.getCheckbox1().isSelected();
+			boolean sinal2 = x.getCheckbox2().isSelected();
+						
+			s.setSinal(sinal1);
+			s2.setSinal(sinal2);
+			
+			A.setSource(s);
+			B.setSource(s2);
+			
+			or.setPinA(A);
+			or.setPinB(B);
+			
+			l.getInputPin(0).setSource(or);
+			
+			boolean saida = l.getOutput(l.getInputPin(0));
+			
+
+			x.getCheckbox4().setSelected(saida);
+		}
+		
+		if (x.getCheck() == 2){
+			NotGate not = new NotGate();
+	    	
+			boolean sinal1 = x.getCheckbox1().isSelected();
+						
+			s.setSinal(sinal1);
+			
+			A.setSource(s);
+			
+			not.setPinA(A);
+			
+			l.getInputPin(0).setSource(not);
+			
+			boolean saida = l.getOutput(l.getInputPin(0));
+
+			x.getCheckbox4().setSelected(saida);
+		}
+		
+		if (x.getCheck() == 3){
+			XorGate xor = new XorGate();
+	    	
+			boolean sinal1 = x.getCheckbox1().isSelected();
+			boolean sinal2 = x.getCheckbox2().isSelected();
+						
+			s.setSinal(sinal1);
+			s2.setSinal(sinal2);
+			
+			A.setSource(s);
+			B.setSource(s2);
+			
+			xor.setPinA(A);
+			xor.setPinB(B);
+			
+			l.getInputPin(0).setSource(xor);
+			
+			boolean saida = l.getOutput(l.getInputPin(0));
+
+			x.getCheckbox4().setSelected(saida);
+		}
+		
+		if (x.getCheck() == 4){
+			HalfAdder ha = new HalfAdder();
+	    	
+			boolean sinal1 = x.getCheckbox1().isSelected();
+			boolean sinal2 = x.getCheckbox2().isSelected();
+						
+			s.setSinal(sinal1);
+			s2.setSinal(sinal2);
+			
+			A.setSource(s);
+			B.setSource(s2);
+			
+			ha.setPinA(A);
+			ha.setPinB(B);
+			
+			l.getInputPin(0).setSource(ha);
+			l2.getInputPin(1).setSource(ha);
+			
+			boolean saida = l.getOutput(l.getInputPin(0));
+			boolean saida2 = l.getOutput(l.getInputPin(0));
+
+			x.getCheckbox4().setSelected(saida);
+			x.getCheckbox5().setSelected(saida2);
+		}
+		
+		if (x.getCheck() == 5){
+			FullAdder fa = new FullAdder();
+	    	
+			boolean sinal1 = x.getCheckbox1().isSelected();
+			boolean sinal2 = x.getCheckbox2().isSelected();
+			boolean sinal3 = x.getCheckbox3().isSelected();
+						
+			s.setSinal(sinal1);
+			s2.setSinal(sinal2);
+			s3.setSinal(sinal3);
+			
+			A.setSource(s);
+			B.setSource(s2);
+			CarryIn.setSource(s3);
+			
+			fa.setPinA(A);
+			fa.setPinB(B);
+			fa.setCarry(CarryIn);
+			
+			l.getInputPin(0).setSource(fa);
+			l2.getInputPin(1).setSource(fa);
+			l3.getInputPin(2).setSource(fa);
+			
+			boolean saida = l.getOutput(l.getInputPin(0));
+			boolean saida2 = l.getOutput(l.getInputPin(0));
+
+			x.getCheckbox4().setSelected(saida);
+			x.getCheckbox5().setSelected(saida2);
+		}
+	}
+}

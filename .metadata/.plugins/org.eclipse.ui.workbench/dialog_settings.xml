@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="202" key="dialogHeight"/>
-		<item value="302" key="dialogWidth"/>
+		<item value="172" key="dialogHeight"/>
+		<item value="272" key="dialogWidth"/>
 		<list key="textEntries">
-			<item value="3"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.jdt.ui.edit.text.java.create.getter.setter"/>
 		</list>
 		<list key="orderedProviders">
-			<item value="org.eclipse.ui.commands"/>
 		</list>
 		<list key="textArray">
-			<item value="setter"/>
-			<item value="gette"/>
-			<item value="getter"/>
 		</list>
 	</section>
 </section>

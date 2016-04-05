@@ -57,7 +57,7 @@ public class MainFrame extends JFrame implements ActionListener{
 
 	/// Metodos de desenho das portas com todas as localizacoes do checkboxs
 	public void paint(Graphics g){
-	    super.paint( g );
+	    super.paintComponents( g );
 	    
         if(check==0){
     	    ///	AND
@@ -150,10 +150,11 @@ public class MainFrame extends JFrame implements ActionListener{
     		checkbox4.setLocation(285,165);
     		checkbox5.setLocation(285,195);
         }
+        repaint();
 
         
         controle.controleSaidas(this);
-        repaint();
+
     }
 	
 	/// Metodos principal para comecar a parte grafica
@@ -226,6 +227,7 @@ public class MainFrame extends JFrame implements ActionListener{
         
         setSize(400,400);
         setVisible(true);
+        
     }    
     
     /// Metodo para quando algum botao for apertado

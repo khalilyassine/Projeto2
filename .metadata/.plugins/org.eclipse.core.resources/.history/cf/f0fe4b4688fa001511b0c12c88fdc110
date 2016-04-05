@@ -1,0 +1,13 @@
+package modelo;
+
+public class Lamp implements Drain {
+	
+	Source source;
+	
+	public InputPin getInputPin(int index) {
+		
+        InputPin pin = new InputPin(index);
+        return pin;
+	}
+
+}

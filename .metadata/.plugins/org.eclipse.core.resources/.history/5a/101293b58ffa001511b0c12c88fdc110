@@ -1,0 +1,292 @@
+package visao;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import controle.ControleSaidas;
+
+
+public class MainFrame extends JFrame implements ActionListener{
+	/// Declaracao de todos atributos(componentes e paineis) do frame.
+    private JButton button_and;
+    private JButton button_or;
+    private JButton button_not;
+    private JButton button_xor;
+    private JButton button_ha;
+    private JButton button_fa;
+    private JCheckBox checkbox1;
+    private JCheckBox checkbox2;
+    private JCheckBox checkbox3;
+    private JCheckBox checkbox4;
+    private JCheckBox checkbox5;
+    private JLabel textHa; 
+    private JLabel textFa; 
+    /// Novo objecto da classe ControleSaida para juntar a logica com a visao
+    ControleSaidas controle = new ControleSaidas();
+    
+    /// Declarao de atributo auxiliar para qual botao sera escolhido.
+    private int check = 6;
+
+    /// Getters dos checkboxs para o controle
+    public int getCheck() {
+		return check;
+	}
+
+	public JCheckBox getCheckbox1() {
+		return checkbox1;
+	}
+
+	public JCheckBox getCheckbox2() {
+		return checkbox2;
+	}
+
+	public JCheckBox getCheckbox3() {
+		return checkbox3;
+	}
+
+	public JCheckBox getCheckbox4() {
+		return checkbox4;
+	}
+
+	public JCheckBox getCheckbox5() {
+		return checkbox5;
+	}
+
+	/// Metodos de desenho das portas com todas as localizacoes do checkboxs
+	public void paint(Graphics g){
+	    super.paint( g );
+        repaint();
+	    
+        if(check==0){
+    	    ///	AND
+    	    g.drawLine(130, 235,160,235);
+    	    g.drawLine(130, 210,160,210);
+    	    g.drawLine(190, 225,215,225);
+    	    g.drawLine(160, 250, 160, 200);
+    	    g.drawArc(140, 200, 50, 50, -100,200 );
+    	    
+    	    checkbox1.setLocation(75,175);
+    	    checkbox2.setLocation(75,200);    	    
+    	    checkbox4.setLocation(215,190);
+        }
+        if(check==1){
+        	/// OR
+    		g.drawLine(95, 210, 145, 210);
+    		g.drawLine(95, 240, 145, 240);
+    		g.drawArc(50, 175, 97, 100, 310, 100);
+    		g.drawLine(129, 187, 189, 187);
+    		g.drawLine(129, 264, 189, 264);
+    		g.drawArc(110, 175, 97, 100, 310, 100);
+    		g.drawLine(208, 225, 255, 225);
+    		
+    	    checkbox1.setLocation(40,175);
+    	    checkbox2.setLocation(40,205);
+    	    checkbox4.setLocation(255,190);
+        }
+        if(check==2){
+        	/// NOT
+    	    g.drawLine(170, 180, 200, 210);
+    	    g.drawLine(200, 210,170,240);
+    	    g.drawLine(170, 180, 170, 240);
+    	    g.drawLine(120, 210,170,210);
+    	    g.drawLine(200, 210,230,210);
+    	    g.drawArc(200, 205, 10, 10, 0, 360);
+    	    
+    	    checkbox1.setLocation(65,175);
+    	    checkbox4.setLocation(230,175);
+        }
+        if(check == 3){
+        	/// XOR
+    		g.drawLine(105, 190, 155, 190);
+    		g.drawLine(105, 220, 155, 220);
+    		g.drawArc(60, 155, 97, 100, 310, 100);
+    		g.drawLine(139, 167, 199, 167);
+    		g.drawLine(139, 244, 199, 244);
+    		g.drawArc(120, 155, 97, 100, 310, 100);
+    		g.drawLine(218, 205, 265, 205);
+    		g.drawArc(47, 155, 97, 100, 310, 100);
+    		
+    	    checkbox1.setLocation(50,155);
+    	    checkbox2.setLocation(50,185);
+    	    checkbox4.setLocation(265,170);
+        }
+        if(check == 4){
+        	/// HALF ADDER
+    		g.drawLine(95, 200, 145, 200);
+    		g.drawLine(95, 230, 145, 230);
+    		g.drawLine(145, 170, 145, 260);
+    		g.drawLine(145, 170, 235, 170);
+    		g.drawLine(145, 260, 235, 260);
+    		g.drawLine(235, 170, 235, 260);
+    		g.drawLine(235, 200, 285, 200);
+    		g.drawLine(235, 230, 285, 230);
+    		
+    		checkbox1.setLocation(40,165);
+    		checkbox2.setLocation(40,195);
+    		checkbox4.setLocation(285,165);
+    		checkbox5.setLocation(285,195);
+    		textHa.setSize(100,50);
+    		textHa.setLocation(150,160);
+        }
+        if(check == 5){
+        	// FULL ADDER
+    		g.drawLine(95, 200, 145, 200);
+    		g.drawLine(95, 230, 145, 230);
+    		g.drawLine(95, 215, 145, 215);
+    		g.drawLine(145, 170, 145, 260);
+    		g.drawLine(145, 170, 235, 170);
+    		g.drawLine(145, 260, 235, 260);
+    		g.drawLine(235, 170, 235, 260);
+    		g.drawLine(235, 200, 285, 200);
+    		g.drawLine(235, 230, 285, 230);
+    		
+    		textFa.setSize(100,50);
+    		textFa.setLocation(150,160);
+    		checkbox1.setLocation(40,160);
+    		checkbox3.setLocation(20,200);
+    		checkbox2.setLocation(40,180);
+    		checkbox4.setLocation(285,165);
+    		checkbox5.setLocation(285,195);
+        }
+
+        
+        controle.controleSaidas(this);
+
+    }
+	
+	/// Metodos principal para comecar a parte grafica
+    public void start(){
+        setLayout(null);
+        /*Button AND*/
+        button_and = new JButton();
+        button_and.setText("AND Gate"); 
+        button_and.setBounds(280 , 0, 120, 20);
+        button_and.addActionListener(this);
+        add(button_and);
+        
+        /*Button OR*/
+        button_or = new JButton();
+        button_or.setText("OR Gate"); 
+        button_or.setBounds(280 , 20, 120, 20);
+        button_or.addActionListener(this);
+        add(button_or);
+        
+        /*Button NOT*/
+        button_not = new JButton();
+        button_not.setText("NOT Gate"); 
+        button_not.setBounds(280 , 40, 120, 20);
+        button_not.addActionListener(this);
+        add(button_not);
+        
+        /*Button XOR*/
+        button_xor = new JButton();
+        button_xor.setText("XOR Gate"); 
+        button_xor.setBounds(280 , 60, 120, 20);
+        button_xor.addActionListener(this);
+        add(button_xor);
+        
+        /*Button HalfAdder*/
+        button_ha = new JButton();
+        button_ha.setText("Half Adder"); 
+        button_ha.setBounds(280 , 80, 120, 20);
+        button_ha.addActionListener(this);
+        add(button_ha);
+        
+        /*Button FullAdder*/
+        button_fa = new JButton();
+        button_fa.setText("Full Adder"); 
+        button_fa.setBounds(280 , 100, 120, 20);
+        button_fa.addActionListener(this);
+        add(button_fa);
+        
+        ///Declaracao de todos CheckBoxs
+        checkbox1 = new JCheckBox("PinA");
+        checkbox1.setHorizontalTextPosition(SwingConstants.LEFT);
+        checkbox2 = new JCheckBox("PinB");
+        checkbox2.setHorizontalTextPosition(SwingConstants.LEFT);
+        checkbox3 = new JCheckBox("CarryIn");
+        checkbox3.setHorizontalTextPosition(SwingConstants.LEFT);
+        checkbox4 = new JCheckBox("Out");
+        checkbox5 = new JCheckBox("CarryOut");
+        
+        checkbox1.setSize(100,20);
+        checkbox2.setSize(100,20);
+        checkbox3.setSize(100,20);
+        checkbox4.setSize(100,20);
+        checkbox5.setSize(100,20);
+        
+        checkbox4.setEnabled(false);
+        checkbox5.setEnabled(false);
+       
+        /// Texto dentro da Half Adder e Full Adder
+        textHa = new JLabel("Half Adder");
+        textFa = new JLabel("Full Adder");
+        
+        setSize(400,400);
+        setVisible(true);
+    }    
+    
+    /// Metodo para quando algum botao for apertado
+    public void actionPerformed(ActionEvent e) {  
+    	/// Remover todos componentes usados anteriormente
+	    remove(checkbox1);
+	    remove(checkbox2);
+	    remove(checkbox3);
+	    remove(checkbox4);
+	    remove(checkbox5);
+	    remove(textHa);
+	    remove(textFa);
+	    
+	    /// Desselecionar todos checkboxs
+	    checkbox1.setSelected(false);
+	    checkbox2.setSelected(false);
+	    checkbox3.setSelected(false);
+	    checkbox4.setSelected(false);
+	    checkbox5.setSelected(false);
+	    
+	    ///Condicoes de checkboxs de acordo com o botao clicado.
+    	if(e.getSource() == button_and){
+    		check=0;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox4);
+    	}
+    	if(e.getSource() == button_or){
+    		check=1;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox4);
+    	}
+    	if(e.getSource() == button_not){
+    		check=2;
+    		add(checkbox1);	
+    		add(checkbox4);
+    	}
+    	if(e.getSource() == button_xor){
+    		check=3;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox4);
+    	}
+    	if(e.getSource() == button_ha){
+    		check=4;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox4);
+    		add(checkbox5);
+    		add(textHa);
+    	}
+    	if(e.getSource() == button_fa){
+    		check=5;
+    		add(checkbox1);
+    		add(checkbox2);	
+    		add(checkbox3);
+    		add(checkbox4);
+    		add(checkbox5);
+    		add(textFa);
+    	}
+    }
+}
